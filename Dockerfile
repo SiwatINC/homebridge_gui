@@ -1,5 +1,5 @@
 FROM siwatinc/nodejsubuntu_base_image
-RUN npm install -g --unsafe-perm homebridge
+RUN npm install -g --unsafe-perm homebridge@latest
 RUN timeout 10s homebridge || :
 RUN touch /root/.homebridge/config.json
 RUN npm install -g --unsafe-perm homebridge-config-ui-x
