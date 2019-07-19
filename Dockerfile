@@ -1,4 +1,5 @@
 FROM siwatinc/nodejsubuntu_base_image
+ARG CACHEBUST=1
 RUN npm install -g --unsafe-perm homebridge
 RUN timeout 10s homebridge || :
 RUN touch /root/.homebridge/config.json
