@@ -1,4 +1,4 @@
-FROM ghcr.io/siwatinc/node-baseimage:node16
+FROM ghcr.io/siwatinc/node-baseimage:node18
 ARG CACHEBUST=1
 RUN npm install -g --unsafe-perm homebridge
 RUN timeout 10s homebridge || :
